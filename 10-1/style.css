@@ -1,0 +1,83 @@
+body{
+    background-color: aliceblue;
+    margin: 0;
+}
+:lang(fa){
+    direction: rtl;
+}
+:lang(en){
+    direction: ltr;
+}
+.card{
+    background-color: white;
+    display: inline-block;
+    box-shadow: 0px 0px 9px -3px gray;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 8px;
+}
+.card__image{
+    display: block;
+    margin: 0px;
+    width: 100%;
+}
+.card_body{
+    padding: 12px;
+}
+.card_title{
+    font-size: x-large;
+    font-weight: bold;
+}
+.card_price{
+    color: gray;
+    margin: 7px 0;
+}
+.card_description{
+
+}
+
+.card_orderbtn{
+    background-color: blueviolet;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        display: block;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .card__image{
+        grid-column: 1/2;
+        height: 100%;
+    }
+    .card_body{
+        grid-column: 2/4;
+    }
+    /*.card_title{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .card_price{
+        color: gray;
+        margin: 7px 0;
+    }
+    .card_description{
+    
+    }
+    */
+    .card_orderbtn{
+        display: inline-block;
+        float: right;
+        padding: 8px 12px;
+    }    
+    .card_orderbtn:lang(fa){
+        float: left;
+    }    
+  }
