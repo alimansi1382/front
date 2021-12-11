@@ -8,6 +8,10 @@ body{
 :lang(en){
     direction: ltr;
 }
+.card_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
 .card{
     background-color: white;
     display: inline-block;
@@ -33,7 +37,7 @@ body{
     margin: 7px 0;
 }
 .card_description{
-
+    
 }
 
 .card_orderbtn{
@@ -48,6 +52,9 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
+    .card_container{
+        grid-template-columns: auto;
+    }
     .card{
         display: block;
         display: grid;
@@ -62,18 +69,6 @@ body{
     .card_body{
         grid-column: 2/4;
     }
-    /*.card_title{
-        font-size: x-large;
-        font-weight: bold;
-    }
-    .card_price{
-        color: gray;
-        margin: 7px 0;
-    }
-    .card_description{
-    
-    }
-    */
     .card_orderbtn{
         display: inline-block;
         float: right;
