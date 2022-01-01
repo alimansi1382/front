@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+}
+body#container{
+    margin: 0;
+    direction: rtl;
+    display: grid;
+    grid-template-areas:    "head head"
+                            "nav  main"
+                            "foot  foot";
+    grid-template-columns: 200px 1fr;
+}
+header#header{
+    grid-area: head;
+    background-color: #8ca0ff;
+}
+#header #HumbergerIcon{
+    display: none;
+    padding: 8px;
+    background-color: aquamarine;
+}
+main#mainContainer{
+    grid-area: main;
+    background-color: #ffa08c;
+    min-height: 89vh;
+}
+aside#sidebar{
+    grid-area: nav;
+    background-color: #ffff64;
+    padding: 10px;
+}
+#sidebar  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#sidebar ul > li{
+    font-size: large;
+    margin: 5px;
+    padding: 5px;
+    background-color: aqua;
+}
+footer#footer{
+    grid-area: foot;
+    background-color: #8cffa0;
+}
+
+@media only screen and (max-width: 750px) {
+    body#container{
+        grid-template-areas:    "head head"
+                                "main  main"
+                                "foot  foot";
+        grid-template-rows: 50px 1fr 30px;
+        grid-template-columns: 200px 1fr;
+    }
+    aside#sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: none;
+    }
+    aside#sidebar.show{
+        display: block;
+    }
+    #header #HumbergerIcon{
+        display: inline-block;
+    }
+}
