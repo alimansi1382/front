@@ -1,0 +1,27 @@
+.input_block{
+    margin: 10px;
+    position: relative;
+}
+.input_block label{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    font-size: large;
+}
+.input_block input{
+    outline: none;
+    padding: 18px 10px 10px 10px;
+    /* box-sizing: border-box; */
+    font-size: large;
+    color: black;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+.input_block.focus label{
+    top: 10%;
+    font-size: small;
+    color: rgb(216, 9, 216);
+}
+.input_block.focus input{
+    border: 2px solid rgb(216, 9, 216);
+}
